@@ -14,7 +14,11 @@ def kajipotefu_convert(text):
     }
 
     # Convert the input string
-    result = ''.join(conversion_dict.get(char, char) for char in text)
+   
+    result = ""
+    
+    for char in text:
+        result += conversion_dict.get(char, char)  # If char not in dict, keep it unchanged
     
     return result
 
